@@ -59,6 +59,8 @@ iconv.convert = function(self, instr)
 		outbytesleft[0] = outbuff_size
 	until inbytesleft[0] == 0
 
+	libiconv.libiconv(cd, nil, nil, nil, nil)
+
 	return table.concat(out)
 end
 
